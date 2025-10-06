@@ -53,7 +53,7 @@ function App() {
 
   useEffect(() => {
     // Estabelece conexão com o servidor Socket.IO
-    const socketInstance = io('http://localhost:3001')
+  const socketInstance = io('https://truco-lan.onrender.com')
     setSocket(socketInstance)
 
     // Listener para evento de conexão
