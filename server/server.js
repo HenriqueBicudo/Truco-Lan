@@ -149,17 +149,19 @@ function tentarIniciarPartida() {
   }
 }
 
-// Configuração do CORS para permitir conexões do Vite
+// Configuração do CORS para permitir conexões do Vite e GitHub Pages
 app.use(cors({
-  origin: [' *'],
-  methods: ['GET', 'POST']
+  origin: ['http://localhost:5173', 'http://localhost:5174', 'https://henriquebicudo.github.io'],
+  methods: ['GET', 'POST'],
+  credentials: true
 }));
 
 // Configuração do Socket.IO
 const io = new Server(server, {
   cors: {
-    origin: ['*'],
-    methods: ['GET', 'POST']
+    origin: ['http://localhost:5173', 'http://localhost:5174', 'https://henriquebicudo.github.io'],
+    methods: ['GET', 'POST'],
+    credentials: true
   }
 });
 
